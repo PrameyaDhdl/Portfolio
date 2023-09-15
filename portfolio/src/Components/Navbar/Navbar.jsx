@@ -19,6 +19,7 @@ const Navbar = () => {
                     <div className="menu">
                         <ul className=" flex items-center gap-10">
                             <li><a className=" text-smallTextColor font-[600]" href="#about">About Me</a></li>
+                            <li><a className=" text-smallTextColor font-[600]" href="#Academics">Academics</a></li>
                             <li><a className=" text-smallTextColor font-[600]" href="#Skills">Skills</a></li>
                             <li><a className=" text-smallTextColor font-[600]" href="#portfolio">Portfolio</a></li>
                             <li><a className=" text-smallTextColor font-[600]" href="#contact">Contact</a></li>
