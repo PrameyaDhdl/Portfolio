@@ -35,7 +35,9 @@ const Skills = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsa. 
                             Velit laboriosam blanditiis cum illo, quas, veniam rem similique eum et quod accusantium 
                             consequuntur provident facilis. Repellendus fuga explicabo laborum.</p>
-        <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
+        <div data-aos='fade-up' 
+            data-aos-duration='1500'
+            className="flex items-center justify-center mt-12 gap-10 flex-wrap ">
           {skills.map((skill, i) => (
             <div key={i} className="border-2 shadow relative min-w-[10rem] max-w-[16rem] bg-primaryColor p-7 rounded-xl group hover:bg-smallTextColor cursor-pointer ease-in duration-150">
               <div className="w-32 h-32 flex items-center justify-center rounded-full">
