@@ -6,6 +6,8 @@ import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/UI/Hero";
 import Academics from "./Components/UI/Academics";
 import AboutMe from "./Components/UI/AboutMe";
+import Skills from "./Components/UI/Skills";
+
 
 function App() {
   useEffect(()=> {
@@ -18,6 +20,7 @@ function App() {
         <Hero/>
         <AboutMe/>
         <Academics/>
+        <Skills/> 
       </main>
       <Footer/>
     </div>
