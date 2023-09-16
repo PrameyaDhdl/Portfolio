@@ -16,9 +16,9 @@ const AboutMe = () => {
 
   const renderImage = () => {
     return (
-      <div className="w-1/2 basis-1/3 mt-5 ml-3 sm:mt-0 sm:order-first">
+      <div className="w-1/2 basis-1/3 mt-5 ml-3 sm:mt-0 sm:w-1/2 sm:mx-auto sm:ml-auto">
         <img
-          className="flex items-center justify-center w-96 h-96" // Increase width and height as desired
+          className="flex items-center justify-center w-auto h-auto sm:w-auto sm:h-auto"
           src={pic}
           alt="pic"
         />
@@ -28,11 +28,11 @@ const AboutMe = () => {
 
   const renderContent = () => {
     return (
-      <div className="w-1/2 sm:order-last">
+      <div className="w-1/2 sm:w-1/2 sm:mx-auto">
         <h1
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7"
+          className="lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7 text-center"
         >
           Greetings, I'm Prameya Dhaubhadel, hailing from the picturesque land
           of Nepal. My heart beats for data, and I find boundless fascination in
