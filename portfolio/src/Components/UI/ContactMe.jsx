@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactMe = () => {
+    const form = useRef();
     const contact_info = [
         {
           logo: "mail-open",
@@ -18,16 +21,33 @@ const ContactMe = () => {
             link: "https://www.instagram.com/prameya_dhdl/",
           },
       ];
+      // Sending Email
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_m4xsxo4', 'template_3t0s1mw', form.current, 'b2ERwpEGcaCXsH2N_')
+          .then((result) => {
+              console.log(result.text);
+              // clear all inputs filled by user
+              form.current.reset();
+              //Sucess toast message
+              toast.success('Email Sent Sucessfully');
+          }, (error) => {
+              console.log(error.text);
+              //error toast message
+              toast.error(error.text);
+          });
+      };
     return(
         <section id='contact' className=" py-8 text-smallTextColor">
+            <Toaster />
             <div className=" text-center mt-8">
                 <h3 className="text-headingColor font-[800] text-[2.4rem] mb-5 mt-5">Contact <span className="text-primaryColor">Me</span></h3>
-                <p className=" lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7">Get in touch</p>
 
                 <div className=" mt-16 flex md:flex-row flex-col gap-6 max-w-5xl md:p-6 p-2 rounded-lg mx-auto bg-primaryColor">
-                    <form className=" flex flex-col flex-1 gap-5 ">
-                        <input type='text' placeholder="Your Name" className="bg-white p-4 rounded shadow"/>
-                        <input type="Email" placeholder="Your Email Address" className="bg-white p-4 rounded shadow"/>
+                    <form ref={form} onSubmit={sendEmail} className=" flex flex-col flex-1 gap-5 ">
+                        <input type='text' name="from_name" placeholder="Your Name" className="bg-white p-4 rounded shadow"/>
+                        <input type="Email" name="user_email" placeholder="Your Email Address" className="bg-white p-4 rounded shadow"/>
                         <textarea placeholder="Your Message" rows={10} className="bg-white p-4 rounded shadow"/>
                         <button className=" text-white bg-smallTextColor font-[500] flex items-center gap-2 rounded-[8px] py-2 px-4 w-fit">Send Message</button>
                     </form>
