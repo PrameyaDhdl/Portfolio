@@ -27,9 +27,11 @@ const Navbar = () => {
                     </div>
                     {/*========================================*/}
                     <div className=" flex items-center gap-4">
-                        <button className=" flex items-center gap-2 text-smallTextColour font-[600] border border-solid border-smallTextColor py-1 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300">
-                            <i class="ri-send-plane-line" ></i> Let's Talk
-                        </button>
+                        <a href='https://wa.me/9840397987'>
+                            <button className=" flex items-center gap-2 text-smallTextColour font-[600] border border-solid border-smallTextColor py-1 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300">
+                                <i class="ri-send-plane-line" ></i> Let's Talk
+                            </button>
+                        </a>
 
                         <span className=" text-2xl text-smallTextColor md:hidden cursor-pointer"></span>
                     </div>

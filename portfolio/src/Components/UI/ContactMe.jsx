@@ -5,14 +5,17 @@ const ContactMe = () => {
         {
           logo: "mail-open",
           text: "prameyadhaubhadel@gmail.com",
+          link: "mailto:prameyadhaubhadel@gmail.com",
         },
         {
             logo: "whatsapp",
-            text: "+977-9040397987",
+            text: "+977 904-0397987",
+            link: "https://wa.me/9840397987",
           },
           {
             logo: "instagram",
             text: "prameya_dhdl",
+            link: "https://www.instagram.com/prameya_dhdl/",
           },
       ];
     return(
@@ -32,10 +35,12 @@ const ContactMe = () => {
                         {
                             contact_info.map((contact, i) => (
                                 <div key={i} className=" flex gap-4 w-fit items-center p-2">
-                                    <div className="min-w-[3.5rem] min-h-[3.5rem] text-3xl flex items-center justify-center bg-smallTextColor text-white rounded-full">
-                                    <i className={`ri-${contact.logo}-line`}></i>
-                                     </div>
-                                <p className=" font-[500] text-[18px] text-smallTextColor">{contact.text}</p>
+                                    <a href={contact.link} className=" flex gap-4 w-fit items-center p-2">
+                                        <div className="min-w-[3.5rem] min-h-[3.5rem] text-3xl flex items-center justify-center bg-smallTextColor text-white rounded-full">
+                                            <i className={`ri-${contact.logo}-line`}></i>
+                                        </div>
+                                        <p className=" font-[500] text-[18px] text-smallTextColor">{contact.text}</p>
+                                    </a>
                                 </div>
                             ))
                         }
