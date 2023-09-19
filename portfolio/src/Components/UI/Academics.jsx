@@ -20,7 +20,7 @@ const AcademicCard = ({ title, institution, date, icon, align }) => (
         </p>
       </div>
     </div>
-    <div className="rounded-full bg-primaryColor text-smallTextColor text-[20px] w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
+    <div className="rounded-full bg-primaryColor text-smallTextColor text-[20px] w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 sm:flex items-center justify-center hidden">
       <span>
         <i className={icon}></i>
       </span>

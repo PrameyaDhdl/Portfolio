@@ -48,7 +48,7 @@ const ContactMe = () => {
                     <form ref={form} onSubmit={sendEmail} className=" flex flex-col flex-1 gap-5 ">
                         <input type='text' name="from_name" placeholder="Your Name" className="bg-white p-4 rounded shadow"/>
                         <input type="Email" name="user_email" placeholder="Your Email Address" className="bg-white p-4 rounded shadow"/>
-                        <textarea placeholder="Your Message" rows={10} className="bg-white p-4 rounded shadow"/>
+                        <textarea placeholder="Your Message" name='message' rows={10} className="bg-white p-4 rounded shadow"/>
                         <button className=" text-white bg-smallTextColor font-[500] flex items-center gap-2 rounded-[8px] py-2 px-4 w-fit">Send Message</button>
                     </form>
                     <div className=" felx flex-col">
