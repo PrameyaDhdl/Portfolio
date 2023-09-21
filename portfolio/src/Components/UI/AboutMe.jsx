@@ -16,9 +16,9 @@ const AboutMe = () => {
 
   const renderImage = () => {
     return (
-      <div className="w-1/2 basis-1/3 mt-5 ml-3 sm:mt-0 sm:w-1/2 sm:mx-auto sm:ml-auto">
+      <div className="w-full sm:w-1/2 lg:w-1/3 mx-auto mt-5 sm:mt-0">
         <img
-          className="flex items-center justify-center w-auto h-auto sm:w-auto sm:h-auto"
+          className="sm:w-full h-auto w-3/4 ml-12 sm:ml-0 " // Adjusted the width for sm view
           src={pic}
           alt="pic"
         />
@@ -28,11 +28,11 @@ const AboutMe = () => {
 
   const renderContent = () => {
     return (
-      <div className="w-1/2 sm:w-1/2 sm:mx-auto">
+      <div className="w-full sm:w-1/2 lg:w-2/3 mx-auto mt-5 sm:mt-2 lg:mt-8">
         <h1
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7 text-center"
+          className="text-smallTextColor font-[500] text-[16px] leading-7 text-center pl-5"
         >
           Greetings, I'm Prameya Dhaubhadel, hailing from the picturesque land
           of Nepal. My heart beats for data, and I find boundless fascination in
@@ -66,9 +66,9 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about">
+    <section id="about" className="pt-4">
       {renderHeader()}
-      <div className="container pt-14">
+      <div className="container pt-4">
         <div className="md:flex items-center justify-between flex-col-reverse sm:flex-row">
           {renderImage()}
           {renderContent()}

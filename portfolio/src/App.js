@@ -8,6 +8,7 @@ import Academics from "./Components/UI/Academics";
 import AboutMe from "./Components/UI/AboutMe";
 import Skills from "./Components/UI/Skills";
 import ContactMe from "./Components/UI/ContactMe";
+import Portfolio from "./Components/UI/Portfolio";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
         <AboutMe />
         <Academics />
         <Skills />
+        <Portfolio/>
         <ContactMe/>
       </main>
       <Footer />
