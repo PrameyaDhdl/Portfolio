@@ -32,7 +32,7 @@ const AboutMe = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="text-smallTextColor font-[500] text-[16px] leading-7 text-center pl-5"
+          className="text-smallTextColor font-[500] text-[16px] leading-7 text-justify pl-5"
         >
           Greetings, I'm Prameya Dhaubhadel, hailing from the picturesque land
           of Nepal. My heart beats for data, and I find boundless fascination in
