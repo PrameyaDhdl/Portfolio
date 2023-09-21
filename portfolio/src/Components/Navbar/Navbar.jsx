@@ -1,19 +1,34 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+
+const NavItem = ({ text, href, onClick }) => (
+  <li>
+    <a
+      onClick={onClick}
+      className="text-smallTextColor font-[600]"
+      href={href}
+    >
+      {text}
+    </a>
+  </li>
+);
 
 const Navbar = () => {
   const headerRef = useRef(null);
+  const [nav, setNav] = useState(false);
 
   const stickyHeaderFunc = () => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        headerRef.current.classList.add("sticky_header");
-      } else {
-        headerRef.current.classList.remove("sticky_header");
-      }
-    });
+    if (headerRef.current) {
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          headerRef.current.classList.add("sticky_header");
+        } else {
+          headerRef.current.classList.remove("sticky_header");
+        }
+      });
+    }
   };
 
   useEffect(() => {
@@ -25,26 +40,35 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e, target) => {
     e.preventDefault();
 
-    const targetAttr = e.target.getAttribute("href");
-    const location = document.querySelector(targetAttr);
+    const location = document.querySelector(target);
 
     if (location) {
-      // Use `scrollIntoView` for smooth scrolling
       location.scrollIntoView({ behavior: "smooth" });
+      // Close the menu by setting nav to false
+      setNav(false);
     }
   };
+
+  const navItems = [
+    { text: "About Me", href: "#about" },
+    { text: "Academics", href: "#Academics" },
+    { text: "Skills", href: "#Skills" },
+    { text: "Portfolio", href: "#portfolio" },
+    { text: "Contact", href: "#contact" },
+  ];
 
   return (
     <div
       ref={headerRef}
-      className="w-full h-[80px] sm:h-[60px] leading-[80px] sm:leading-[60px] flex items-center"
+      className={`w-full h-[80px] sm:h-[60px] ${
+        nav ? "sticky_header" : ""
+      } leading-[80px] sm:leading-[60px] flex items-center`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
-          {/*=========== logo=========*/}
           <div className="flex items-center gap-[10px]">
             <span className="w-[45px] h-[45px] bg-primaryColor text-black text-[18px] font-[500] rounded-full flex items-center justify-center">
               PD
@@ -58,67 +82,49 @@ const Navbar = () => {
               </p>
             </div>
           </div>
-          {/*=========== logo end =========*/}
-          <div className="menu">
-            <ul className="flex items-center gap-10">
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-smallTextColor font-[600]"
-                  href="#about"
-                >
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-smallTextColor font-[600]"
-                  href="#Academics"
-                >
-                  Academics
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-smallTextColor font-[600]"
-                  href="#Skills"
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-smallTextColor font-[600]"
-                  href="#portfolio"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={handleClick}
-                  className="text-smallTextColor font-[600]"
-                  href="#contact"
-                >
-                  Contact
-                </a>
-              </li>
+          <div className={`menu ${nav ? "block" : "hidden"} md:flex`}>
+            <ul className="md:flex items-center gap-10 hidden">
+              {navItems.map((item, index) => (
+                <NavItem
+                  key={index}
+                  text={item.text}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                />
+              ))}
             </ul>
           </div>
-          {/*========================================*/}
           <div className="flex items-center gap-4">
             <a href="https://wa.me/9840397987">
               <button className="flex items-center gap-2 text-smallTextColour font-[600] border border-solid border-smallTextColor py-1 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300">
                 <i className="ri-send-plane-line"></i> Let's Talk
               </button>
             </a>
-            <span className="text-2xl text-smallTextColor md:hidden cursor-pointer">
-              {/* Add an icon or element for mobile menu toggle here */}
-              {/* For example: <i className="ri-menu-line"></i> */}
+            <span
+              onClick={() => setNav(!nav)}
+              className="text-2xl text-smallTextColor md:hidden cursor-pointer"
+            >
+              {nav ? (
+                <i className="ri-close-line"></i>
+              ) : (
+                <i className="ri-menu-fill"></i>
+              )}
             </span>
+            {nav && (
+              <ul
+                className="flex flex-col justify-center items-center absolute top-[80px] left-0 w-full h-screen bg-white"
+                // Set the top position to the height of the navigation bar (80px)
+              >
+                {navItems.map((item, index) => (
+                  <NavItem
+                    key={index}
+                    text={item.text}
+                    href={item.href}
+                    onClick={(e) => handleClick(e, item.href)}
+                  />
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
