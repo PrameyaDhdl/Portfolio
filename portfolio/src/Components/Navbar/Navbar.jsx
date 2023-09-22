@@ -67,7 +67,7 @@ const Navbar = () => {
         nav ? "sticky_header" : ""
       } leading-[80px] sm:leading-[60px] flex items-center`}
     >
-      <div className="container">
+      <div className="container md:px-56">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-[10px]">
             <span className="w-[45px] h-[45px] bg-primaryColor text-black text-[18px] font-[500] rounded-full flex items-center justify-center">

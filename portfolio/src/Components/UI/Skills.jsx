@@ -25,7 +25,7 @@ const Skills = () => {
   ];
   
   return (
-    <section id="Skills" className="mb-5 mt-5 relative">
+    <section id="Skills" className="mb-5 mt-5 relative md:px-56 ">
       <div className="mt-8 text-center">
         <h3 className="text-headingColor font-[800] text-[2.4rem] mb-5 mt-1">
           My Sk<span className="text-primaryColor">i</span>lls

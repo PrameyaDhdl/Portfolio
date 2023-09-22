@@ -39,7 +39,7 @@ const ContactMe = () => {
           });
       };
     return(
-        <section id='contact' className=" py-8 text-smallTextColor">
+        <section id='contact' className=" py-8 text-smallTextColor md:px-56">
             <Toaster />
             <div className=" text-center mt-8">
                 <h3 className="text-headingColor font-[800] text-[2.4rem] mb-5 mt-5">Contact <span className="text-primaryColor">Me</span></h3>

@@ -28,7 +28,7 @@ const AboutMe = () => {
 
   const renderContent = () => {
     return (
-      <div className="w-full sm:w-1/2 lg:w-2/3 mx-auto mt-5 sm:mt-2 lg:mt-8">
+      <div className="w-full sm:w-1/2 lg:w-2/3 mx-auto mt-5 sm:mt-2 lg:mt-8 ">
         <h1
           data-aos="fade-up"
           data-aos-duration="1500"
@@ -66,7 +66,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about" className="pt-4">
+    <section id="about" className="pt-4 md:px-56">
       {renderHeader()}
       <div className="container pt-4">
         <div className="md:flex items-center justify-between flex-col-reverse sm:flex-row">

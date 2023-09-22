@@ -55,7 +55,7 @@ const Academics = () => {
 
   return (
     <section id="Academics">
-      <div className="container lg:pt-7">
+      <div className="container lg:pt-7 md:px-56">
         <div className="text-center">
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5 mt-5">
             My <span className="text-primaryColor">Academics</span>

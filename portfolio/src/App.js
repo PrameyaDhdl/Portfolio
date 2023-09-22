@@ -15,7 +15,7 @@ function App() {
     Aos.init();
   }, []);
   return (
-    <div className="sm:p-0 px-4 md:px-56">
+    <div className="sm:p-0 px-4 ">
       <Navbar />
       <main>
         <Hero />

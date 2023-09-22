@@ -33,7 +33,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pt-0">
+    <section className="pt-0 md:px-56">
       <div className="container pt-14">
         <div className="md:flex items-center justify-between flex-col md:flex-row">
           {/*==== hero left content====*/}
