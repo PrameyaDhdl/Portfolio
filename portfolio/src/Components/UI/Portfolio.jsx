@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import uni from "../../assets/images/uni.png";
 import paws from "../../assets/images/paws.png"
 import hms from "../../assets/images/hms.png"
-import "tailwindcss/tailwind.css"; // Make sure to import Tailwind CSS
+import "tailwindcss/tailwind.css";
 
 const Portfolio = () => {
   const projects = [
@@ -111,7 +111,7 @@ const Portfolio = () => {
                   className="font-[500] bg-primaryColor py-2 px-6 rounded text-smallTextColor hover:bg-white"
                   onClick={() => handleAboutMeClick(index)}
                 >
-                  About me
+                  About It
                 </button>
                 <button
                   className="outline py-1.5 px-9 font-[500] rounded border-none ml-5 text-primaryColor"

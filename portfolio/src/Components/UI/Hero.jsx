@@ -27,7 +27,7 @@ const Hero = () => {
       icon: "ri-github-fill",
     },
     {
-      href: "#facebook",
+      href: "https://www.facebook.com/prameya.dhaubhadel.1",
       icon: "ri-facebook-circle-fill",
     },
   ];
