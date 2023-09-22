@@ -21,7 +21,8 @@ const Portfolio = () => {
         PAWS offers peace of mind, enhances pet care, and strengthens the bond between pets and their owners. It's the 
         ultimate smart pet collar, combining GPS tracking, activity monitoring, safety features, and health insights in 
         one streamlined package.</p>),
-      photo: paws, 
+      photo: paws,
+      link:'https://drive.google.com/file/d/15d2c3x3KAdj1zHZk7QlwCalRZBhslDCr/view?usp=sharing', 
     },
     {
       title: "UK UniGalore",
@@ -46,14 +47,31 @@ const Portfolio = () => {
           The algorithm proved to be working fully and correctly by completing an assertion table and testing with
           a respective assert statement.</p>
         ),
-      photo: uni, 
+      photo: uni,
+      link:'https://drive.google.com/file/d/17bpFkH11d4dZjVawXus2qdwWQqAYPWK7/view?usp=sharing', 
     },
     {
       title: "Hospital Management System",
-      summary: 'An Algorithm designed to locate and analyze the UK Universities according to the preference',
+      summary: 'A healthcare system designed to maintain real-time data for effective management and updates.',
       description:
-        "Mobile app for booking instant pickup & drop-off across major cities.",
+        (
+          <p>This Hospital Management code and algorithm has been intricately tailored to meet the specific 
+          needs of healthcare institutions. It serves as a versatile tool for administrators, doctors,
+           and nurses, providing them with the capability to seamlessly add, remove, and allocate patients, 
+           ensuring optimal resource utilization. Furthermore, the system enables hospitals to maintain a real-time 
+           overview of their patient population, facilitating efficient care delivery and resource management.<br/><br/>
+           With the ability to track both current inpatients and discharged individuals, the system empowers healthcare 
+           providers to maintain comprehensive patient records, enhancing the continuity of care and improving patient outcomes. 
+           It's not just about managing data; it's about optimizing healthcare operations while prioritizing data security and accuracy. 
+           This code and algorithm stand as a pillar of support for hospital administrators, enabling them to provide high-quality 
+           healthcare services while keeping patient information safe and up-to-date.<br/><br/>
+           In conclusion, this meticulously designed Hospital Management code and algorithm serve as a vital tool for healthcare facilities. 
+           It streamlines patient management, optimizes resource allocation, and ensures data accuracy, ultimately contributing to improved patient 
+           care and operational efficiency. This robust system stands at the forefront of modern healthcare administration, empowering hospitals to 
+           provide top-notch medical services while safeguarding patient information.</p>
+          ),
       photo: hms, 
+      link:'https://github.com/PrameyaDhdl/HMS', 
     },
     // Add more projects as needed...
   ];
@@ -109,12 +127,13 @@ const Portfolio = () => {
                 >
                   About It
                 </button>
-                <button
-                  className="outline py-1.5 px-9 font-[500] rounded border-none ml-5 text-primaryColor"
-                  onClick={closeDescription}
-                >
-                  Projects
-                </button>
+                <a key={index} href={project.link}>
+                  <button
+                    className="outline py-1.5 px-9 font-[500] rounded border-none ml-5 text-primaryColor"
+                  >
+                    Projects
+                  </button>
+                </a>
               </div>
             </div>
           );
