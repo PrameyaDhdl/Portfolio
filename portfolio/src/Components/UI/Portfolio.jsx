@@ -40,13 +40,9 @@ const Portfolio = () => {
           separating it into smaller portions, whereas binary search searches sorted datasets quickly and effectively.
           When interacting with survey data, these algorithms lead to enhanced performance and a better user
           experience.<br/><br/>
-          Quick Sort is an O(n log n) average time complexity. In comparison, the average time complexity of Bubble
-          Sort and Insertion Sort is O(n2). The divide-and-conquer approach of Quick Sort, combined with its better
-          efficiency, makes it an excellent choice for sorting huge data sets and optimizing memory utilization.
-          Binary Search, on the other hand, stands out as a quick and efficient search algorithm with a time
-          complexity of O(log n). Binary Search quickly narrows down the required element by halving the search
-          space with each comparison, making it especially useful for sorted or easily sorted data but requires a
-          sorted dataset.<br/><br/>
+          Quick Sort: O(n log n) average time complexity, efficient for large data sets.
+          Bubble Sort & Insertion Sort: O(n^2) average time complexity, less efficient.
+          Binary Search: O(log n) time complexity, quick and efficient for sorted data.<br/><br/>
           The algorithm proved to be working fully and correctly by completing an assertion table and testing with
           a respective assert statement.</p>
         ),
