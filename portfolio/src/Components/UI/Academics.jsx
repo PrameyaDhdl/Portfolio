@@ -61,10 +61,10 @@ const Academics = () => {
             My <span className="text-primaryColor">Academics</span>
           </h2>
           <p className="lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-            ipsa. Velit laboriosam blanditiis cum illo, quas, veniam rem
-            similique eum et quod accusantium consequuntur provident facilis.
-            Repellendus fuga explicabo laborum.
+            In my academic journey, I've pursued excellence and a passion for diverse learning. 
+            Beyond excelling in core coursework, I've enriched my experience through extracurricular activities. 
+            My dedication to growth extends beyond grades, driving me to embrace intellectual challenges. I take pride 
+            in my achievements and eagerly anticipate expanding my horizons in my ongoing educational journey.
           </p>
         </div>
         <div className="flex flex-col justify-center sm:py-12">

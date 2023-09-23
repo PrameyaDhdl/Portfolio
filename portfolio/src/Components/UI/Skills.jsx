@@ -32,9 +32,9 @@ const Skills = () => {
         </h3>
         <p className="lg-mx-auto text-smallTextColor font-[500] text-[20px] leading-7 my-4">My Knowledge</p>
         <p className=" lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsa. 
-                            Velit laboriosam blanditiis cum illo, quas, veniam rem similique eum et quod accusantium 
-                            consequuntur provident facilis. Repellendus fuga explicabo laborum.</p>
+          Below, you will find a selection of skills that I have cultivated within an academic context. 
+          I believe they are a testament to my commitment to learning and my capacity to excel in various academic challenges. 
+          Please review the following list of academic skills to gain insight into my capabilities in this context.</p>
         <div data-aos='fade-up' 
             data-aos-duration='1500'
             className="flex items-center justify-center mt-12 gap-10 flex-wrap ">

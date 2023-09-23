@@ -93,8 +93,8 @@ const Portfolio = () => {
       </h2>
       <p className="lg-mx-auto text-smallTextColor font-[500] text-[20px] leading-7 my-4">My Projects</p>
       <p className="lg-mx-auto text-smallTextColor font-[500] text-[16px] leading-7 pb-4">
-        I have worked on many projects over the course of being a Web Developer,
-        here are a few of my live, real-world projects
+        Below, you'll find a selection of the works and projects that I have undertaken, 
+        each representing a significant facet of my academic journey.
       </p>
 
       {/* Featured projects */}
